@@ -12,6 +12,7 @@
 !bin/symfony_requirements
 !bin/update-dev
 !bin/install
+!bin/set-permissions
 /composer.phar
 /.idea/
 
