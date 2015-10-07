@@ -5,6 +5,8 @@
 # to each configured DirectoryIndex file (e.g. index.php, index.html, index.pl).
 DirectoryIndex app.php
 
+ErrorDocument 503 /503.html
+
 # By default, Apache does not evaluate symbolic links if you did not enable this
 # feature in your server configuration. Uncomment the following line if you
 # install assets as symlinks or if you experience problems related to symlinks
@@ -19,6 +21,11 @@ DirectoryIndex app.php
 
 <IfModule mod_rewrite.c>
     RewriteEngine On
+
+    # Maintenance Mode?
+    RewriteCond %{ENV:REDIRECT_STATUS} !=503
+    RewriteCond "%{DOCUMENT_ROOT}/IN_MAINTENANCE_MODE" -f
+    RewriteRule ^(.*)$ /$1 [R=503,L]
 
     # Determine the RewriteBase automatically and set it as environment variable.
     # If you are using Apache aliases to do mass virtual hosting or installed the

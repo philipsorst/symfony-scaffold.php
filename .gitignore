@@ -13,5 +13,7 @@
 !bin/update-dev
 !bin/install
 !bin/set-permissions
+!bin/maintenance.off
+!bin/maintenance.on
 /composer.phar
 /.idea/
