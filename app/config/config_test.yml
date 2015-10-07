@@ -14,3 +14,9 @@ web_profiler:
 
 swiftmailer:
     disable_delivery: true
+
+doctrine:
+    dbal:
+        driver:   pdo_sqlite
+        path:     '%kernel.root_dir%/../var/data/test.db3'
+        charset:  UTF8

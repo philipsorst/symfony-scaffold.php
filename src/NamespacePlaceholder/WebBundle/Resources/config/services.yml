@@ -1,0 +1,11 @@
+services:
+
+    namespace_placeholder_web.menu.builder:
+        class: NamespacePlaceholder\WebBundle\Menu\MenuBuilder
+        arguments:
+            - "@knp_menu.factory"
+            - "@security.token_storage"
+            - "@security.authorization_checker"
+        tags:
+            - { name: knp_menu.menu_builder, method: createNavbarRightMenu, alias: navbar_right }
+            - { name: knp_menu.menu_builder, method: createNavbarLeftMenu, alias: navbar_left }

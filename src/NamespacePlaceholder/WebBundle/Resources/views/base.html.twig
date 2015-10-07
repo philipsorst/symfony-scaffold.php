@@ -1,0 +1,23 @@
+{% extends "DdrUtilsBundle::bootstrap_navbar.html.twig" %}
+
+{% block brand %}Brand{% endblock brand %}
+
+{% block navbar_left %}
+    {{ knp_menu_render('navbar_left', { 'style': 'navbar' }) }}
+{% endblock navbar_left %}
+
+{% block navbar_right %}
+    {{ knp_menu_render('navbar_right', { 'style': 'navbar-right' }) }}
+{% endblock navbar_right %}
+
+{% block body %}
+    {% if brand_url == '#' %}
+        {% set brand_url = path('namespace_placeholder_web_index') %}
+    {% endif %}
+    {{ parent() }}
+
+    <div class="container">
+        {% block container %}
+        {% endblock container %}
+    </div>
+{% endblock body %}

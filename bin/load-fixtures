@@ -1,0 +1,2 @@
+#!/bin/sh
+bin/console doctrine:fixtures:load && bin/console doctrine:cache:clear-query && bin/console doctrine:cache:clear-result
