@@ -3,8 +3,10 @@
 /var/bootstrap.php.cache
 /var/cache/*
 /var/logs/*
+/var/data/*
 !var/cache/.gitkeep
 !var/logs/.gitkeep
+!var/data/.gitkeep
 /build/
 /vendor/
 /bin/*
@@ -15,5 +17,7 @@
 !bin/set-permissions
 !bin/maintenance.off
 !bin/maintenance.on
+!bin/run-tests
+!bin/load-fixtures
 /composer.phar
 /.idea/

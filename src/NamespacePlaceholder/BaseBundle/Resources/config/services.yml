@@ -1,0 +1,7 @@
+services:
+
+    namespace_placeholder_base.repository.user:
+        class: NamespacePlaceholder\BaseBundle\Repository\UserRepository
+        factory_service: doctrine.orm.entity_manager
+        factory_method: getRepository
+        arguments: [ NamespacePlaceholder\BaseBundle\Entity\User ]

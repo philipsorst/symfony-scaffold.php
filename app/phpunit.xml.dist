@@ -13,10 +13,20 @@
 
 
     <testsuites>
-        <testsuite name="Project Test Suite">
-            <directory>../src/*Bundle/Tests</directory>
-            <directory>../src/*/*Bundle/Tests</directory>
-            <directory>../src/*/*/*Bundle/Tests</directory>
+        <testsuite name="Unit Tests">
+            <directory>../src/*Bundle/Tests/Unit</directory>
+            <directory>../src/*/*Bundle/Tests/Unit</directory>
+            <directory>../src/*/*/*Bundle/Tests/Unit</directory>
+        </testsuite>
+        <testsuite name="Integration Tests">
+            <directory>../src/*Bundle/Tests/Integration</directory>
+            <directory>../src/*/*Bundle/Tests/Integration</directory>
+            <directory>../src/*/*/*Bundle/Tests/Integration</directory>
+        </testsuite>
+        <testsuite name="Acceptance Tests">
+            <directory>../src/*Bundle/Tests/Acceptance</directory>
+            <directory>../src/*/*Bundle/Tests/Acceptance</directory>
+            <directory>../src/*/*/*Bundle/Tests/Acceptance</directory>
         </testsuite>
     </testsuites>
 

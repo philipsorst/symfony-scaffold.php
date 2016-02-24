@@ -1,0 +1,8 @@
+{% extends 'DdrUtilsBundle::bootstrap.html.twig' %}
+
+{% block title %}Login{% endblock title %}
+{% block body %}
+    <div class="container">
+        {% include 'DdrUtilsBundle:FOSUser:login.partial.html.twig' with {'title': 'Login', 'showResetLink' : true} %}
+    </div>
+{% endblock body %}

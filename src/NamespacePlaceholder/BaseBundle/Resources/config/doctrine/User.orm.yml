@@ -1,0 +1,8 @@
+NamespacePlaceholder\BaseBundle\Entity\User:
+    type:  entity
+    repositoryClass: NamespacePlaceholder\BaseBundle\Repository\UserRepository
+    id:
+        id:
+            type: integer
+            generator:
+                strategy: AUTO
